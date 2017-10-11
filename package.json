@@ -1,29 +1,26 @@
 {
   "name": "javascript-algorithms",
   "version": "0.0.0",
-  "description": "Implementations of different computer science algorithms",
+  "description":
+    "Implementations of different computer science algorithms in ES6",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
-    "gulp-eslint": "^3.0.1",
-    "gulp": "^3.8.10",
-    "gulp-jasmine": "^2.0.1",
-    "gulp-shell": "^0.2.11",
-    "jsdoc": "3.3.0-alpha13"
+    "graceful-fs": "^4.1.11",
+    "jest": "^21.2.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mgechev/javascript-algorithms"
+    "url": "https://github.com/alexjoverm/javascript-algorithms-es6.git"
   },
-  "author": "@mgechev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mgechev/javascript-algorithms/issues"
-  },
-  "homepage": "https://github.com/mgechev/javascript-algorithms"
+  "author": "Alex Jover M <alexjovermorales@gmail.com>",
+  "license": "MIT"
 }
