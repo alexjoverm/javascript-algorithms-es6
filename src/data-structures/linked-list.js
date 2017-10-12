@@ -12,6 +12,17 @@ class LinkedList {
     this.last = null
   }
 
+  unshift(item) {
+    const node = new Node(item)
+    if (this.first === null) {
+      this.first = this.last = node
+    } else {
+      node.next = this.first
+      this.first.prev = node
+      this.first = node
+    }
+  }
+
   push(item) {
     const node = new Node(item)
     if (this.first === null) {
