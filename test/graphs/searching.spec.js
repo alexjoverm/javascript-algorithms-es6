@@ -1,4 +1,4 @@
-const Graph = require('../../../src/graphs/searching/bfs')
+const Graph = require('../../src/graphs/searching')
 
 describe('BFS', function() {
   it('Prints correctly', function() {

@@ -9,17 +9,21 @@ class Graph {
 
   bfs(startNode = 0) {
     let results = []
-    if (!this.graph.length) return results
-
-    // TODO: Mark unvisited
-
     let queue = [startNode]
+    let visited = { [startNode]: true }
+
+    if (!this.graph.length) return results
 
     while (queue.length) {
       let node = this.graph[queue.shift()]
-      // TODO: mark visited
+
       results.push(node)
-      node.connections.forEach(connection => queue.push(connection))
+      node.connections.forEach(connection => {
+        if (!visited[connection]) {
+          queue.push(connection)
+          visited[connection] = true
+        }
+      })
     }
 
     return results
